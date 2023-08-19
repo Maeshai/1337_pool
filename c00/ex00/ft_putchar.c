@@ -1,33 +1,18 @@
-<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cel-ghan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 17:25:12 by cel-ghan          #+#    #+#             */
-/*   Updated: 2023/08/19 16:02:31 by cel-ghan         ###   ########.fr       */
+/*   Created: 2023/08/16 10:12:32 by cel-ghan          #+#    #+#             */
+/*   Updated: 2023/08/17 17:01:35 by cel-ghan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
-=======
-#include <stdio.h>
-void ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
-int main()
-{
-	int	x;
-	int	*nbr;
+#include <unistd.h>
 
-	nbr = &x;
-	ft_ft(nbr);
-	printf("%d", x);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
->>>>>>> 2f20a6f3986a0b881bf9c8de53b62ef54297b9c2

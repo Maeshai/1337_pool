@@ -1,33 +1,25 @@
-<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cel-ghan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 17:25:12 by cel-ghan          #+#    #+#             */
-/*   Updated: 2023/08/19 16:02:31 by cel-ghan         ###   ########.fr       */
+/*   Created: 2023/08/16 13:23:42 by cel-ghan          #+#    #+#             */
+/*   Updated: 2023/08/17 17:43:24 by cel-ghan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
-=======
-#include <stdio.h>
-void ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
-int main()
-{
-	int	x;
-	int	*nbr;
+#include <unistd.h>
 
-	nbr = &x;
-	ft_ft(nbr);
-	printf("%d", x);
+void	ft_is_negative(int n)
+{	
+	if (n < 0)
+	{
+		write(1, &"N", 1);
+	}
+	else
+	{
+		write(1, &"P", 1);
+	}
 }
->>>>>>> 2f20a6f3986a0b881bf9c8de53b62ef54297b9c2

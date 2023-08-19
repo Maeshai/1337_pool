@@ -1,33 +1,41 @@
-<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cel-ghan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 17:25:12 by cel-ghan          #+#    #+#             */
-/*   Updated: 2023/08/19 16:02:31 by cel-ghan         ###   ########.fr       */
+/*   Created: 2023/08/16 13:40:18 by cel-ghan          #+#    #+#             */
+/*   Updated: 2023/08/17 17:09:20 by cel-ghan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
-=======
-#include <stdio.h>
-void ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
-int main()
-{
-	int	x;
-	int	*nbr;
+#include <unistd.h>
 
-	nbr = &x;
-	ft_ft(nbr);
-	printf("%d", x);
+void	ft_print_comb(void)
+{
+	char	a;
+	char	b;
+	char	c;
+
+	a = '0';
+	while (a <= '7')
+	{
+		b = a + 1;
+		while (b <= '8')
+		{
+			c = b + 1;
+			while (c <= '9')
+			{
+				write(1, &a, 1);
+				write(1, &b, 1);
+				write(1, &c, 1);
+				if (a != '7')
+					write(1, ", ", 2);
+				c++;
+			}
+			b++;
+		}
+		a++;
+	}
 }
->>>>>>> 2f20a6f3986a0b881bf9c8de53b62ef54297b9c2
