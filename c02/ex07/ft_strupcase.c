@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cel-ghan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/19 19:54:01 by cel-ghan          #+#    #+#             */
-/*   Updated: 2023/08/22 17:10:27 by cel-ghan         ###   ########.fr       */
+/*   Created: 2023/08/21 09:07:38 by cel-ghan          #+#    #+#             */
+/*   Updated: 2023/08/21 11:30:25 by cel-ghan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_uppercase(char *str)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!(str[i] <= 'Z' && str[i] >= 'A'))
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			return (0);
+			str[i] -= 32;
 		}
 		i++;
 	}
-	return (1);
+	return (str);
 }
