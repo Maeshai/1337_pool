@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cel-ghan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/02 15:21:32 by cel-ghan          #+#    #+#             */
-/*   Updated: 2023/09/02 15:23:03 by cel-ghan         ###   ########.fr       */
+/*   Created: 2023/09/02 15:01:24 by cel-ghan          #+#    #+#             */
+/*   Updated: 2023/09/02 15:42:20 by cel-ghan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+int	ft_is_prime(int nb)
 {
-	if (index < 0)
-		return (-1);
-	else if (index < 2)
-		return (index);
-	else
-		return (ft_fibonacci(index -2) + ft_fibonacci(index -1));
+	int	i;
+
+	i = 2;
+	if (nb < 2)
+		return (0);
+	while (i * i <= nb)
+	{
+		if (nb % i == 0)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+
+int	ft_find_next_prime(int nb)
+{
+	if (nb <= 2)
+		return (2);
+	while (ft_is_prime(nb) != 1)
+	{
+		nb++;
+		return (nb);
+	}
 }

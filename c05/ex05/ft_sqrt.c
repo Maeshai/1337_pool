@@ -1,21 +1,29 @@
-#include <stdio.h>
-int ft_sqrt(int nb)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cel-ghan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/02 15:23:31 by cel-ghan          #+#    #+#             */
+/*   Updated: 2023/09/02 15:26:45 by cel-ghan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_sqrt(int nb)
 {
-	if (nb < 0)
-		return 0;
-	int i;
+	int	i;
+
 	i = 0;
-	while(i <= nb)
+	if (nb < 0)
+		return (0);
+	while (i <= nb)
 	{
-		if(i * i == nb)
+		if (i * i == nb)
 		{
-			return i;
+			return (i);
 		}
 		i++;
 	}
-	return 0; //square root is an irrational number
-}
-int main()
-{
-	printf("sqrt of %d is %d\n", 16, ft_sqrt(16));
+	return (0);
 }
