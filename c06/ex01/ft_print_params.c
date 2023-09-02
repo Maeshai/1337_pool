@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cel-ghan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/02 17:37:31 by cel-ghan          #+#    #+#             */
+/*   Updated: 2023/09/02 17:38:31 by cel-ghan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 int	main(int argc, char *argv[])
@@ -5,11 +17,11 @@ int	main(int argc, char *argv[])
 	int	i;
 
 	i = 1;
-	while(i < argc)
+	while (i < argc)
 	{
-		write(1, argv[i], strlen(argv[i]));
-		write(1, "\n", 1);
+		write (1, argv[i], strlen(argv[i]));
+		write (1, "\n", 1);
 		i++;
 	}
-	return 0;
+	return (0);
 }
